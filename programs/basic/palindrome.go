@@ -5,7 +5,7 @@ import (
 	// "strconv"
 )
 
-func Palinornot(x int) string {
+func Palinornot(x int) bool {
 
 	// a := strconv.Itoa(x)
 	y := 0
@@ -21,8 +21,8 @@ func Palinornot(x int) string {
 	}
 	fmt.Println(z, y)
 	if z == y {
-		return "yes its palindrome"
+		return true
 	} else {
-		return "not a palindrome"
+		return false
 	}
 }

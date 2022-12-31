@@ -3,13 +3,12 @@ package basic
 import "fmt"
 
 func Printfib(x int) {
-	a := 0
-	b := 1
-	fmt.Print(a, b, " ")
-	for i := 1; i < x; i++ {
-		c := a + b
-		fmt.Print(c, " ")
-		a = b
-		b = c
+
+	var myslice = []int{0, 1}
+
+	for i := 0; i < x-2; i++ {
+		result := myslice[i] + myslice[i+1]
+		myslice = append(myslice, result)
 	}
+	fmt.Println(myslice)
 }
